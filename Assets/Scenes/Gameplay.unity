@@ -2546,17 +2546,21 @@ PrefabInstance:
       propertyPath: Turn7
       value: 
       objectReference: {fileID: 1980530307}
+    - target: {fileID: -7450004069909658702, guid: ffdd9c9d9f02c3a4eb94c857b198e830, type: 3}
+      propertyPath: moveSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6762858088804233752, guid: ffdd9c9d9f02c3a4eb94c857b198e830, type: 3}
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 7116865804441112801, guid: ffdd9c9d9f02c3a4eb94c857b198e830, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.6114569
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7116865804441112801, guid: ffdd9c9d9f02c3a4eb94c857b198e830, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.979
+      value: -1.69
       objectReference: {fileID: 0}
     - target: {fileID: 7116865804441112801, guid: ffdd9c9d9f02c3a4eb94c857b198e830, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4386,6 +4390,7 @@ GameObject:
   - component: {fileID: 291382210}
   - component: {fileID: 291382209}
   - component: {fileID: 291382208}
+  - component: {fileID: 291382211}
   m_Layer: 5
   m_Name: STArtbutton
   m_TagString: Untagged
@@ -4456,7 +4461,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 291382209}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 291382211}
+        m_TargetAssemblyTypeName: waveSystem, Assembly-CSharp
+        m_MethodName: StartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &291382209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4495,6 +4512,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 291382206}
   m_CullTransparentMesh: 1
+--- !u!114 &291382211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291382206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5c462bb714b3b344b3c7396cfd438c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 897534689}
+  spawnPoint: {fileID: 1186281538}
+  waveCounterText: {fileID: 1204983655}
 --- !u!1001 &291883626
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16404,6 +16436,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2875fc7037e6634499e888acf8b712b9, type: 3}
   m_PrefabInstance: {fileID: 894707467}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &897534689 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6762858088804233752, guid: ffdd9c9d9f02c3a4eb94c857b198e830, type: 3}
+  m_PrefabInstance: {fileID: 151033586}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &909633196
 PrefabInstance:
