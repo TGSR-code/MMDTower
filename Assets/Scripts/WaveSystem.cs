@@ -7,17 +7,21 @@ public class waveSystem : MonoBehaviour
     [SerializeField] private GameObject enemyPrefab;
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private TextMeshProUGUI waveCounterText;
+    [SerializeField] private TextMeshProUGUI MoneyCounterText;
     [SerializeField] private Button startButton;
+
 
     private int currentWave = 0;
     private int totalWaves = 15;
     private int aliveEnemies = 0;
+    private int PlayerMoney = 10;
 
 
     public void StartGame()
     {
         Destroy(startButton.gameObject);
         StartWave();
+        PlayerMoney += 500;
     }
 
     void Update()
@@ -26,6 +30,7 @@ public class waveSystem : MonoBehaviour
         if (aliveEnemies <= 0 && currentWave > 0 && currentWave < totalWaves)
         {
             StartWave();
+
         }
     }
 
