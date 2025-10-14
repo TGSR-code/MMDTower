@@ -4,7 +4,6 @@ using UnityEngine.UI;
 
 public class waveSystem : MonoBehaviour
 {
-
     [SerializeField] private EnemyPathfinding EnemyPathfindingEnemy;
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private TextMeshProUGUI waveCounterText;
@@ -17,31 +16,39 @@ public class waveSystem : MonoBehaviour
     [SerializeField] private Transform Turn6;
     [SerializeField] private Transform Turn7;
 
-
     [SerializeField] private Button startButton;
 
+    [Header("Money System")]
+    [SerializeField] private MoneyHandler moneyHandler; 
 
     private int currentWave = 0;
     private int totalWaves = 15;
     private int aliveEnemies = 0;
 
-
-    
-
     public void StartGame()
     {
-        Destroy(startButton.gameObject);
-        StartWave();
        
+        Destroy(startButton.gameObject);
+
+        
+        if (moneyHandler != null)
+        {
+            moneyHandler.GainMoney(500);
+        }
+        else
+        {
+            Debug.LogWarning("MoneyHandler is niet gelinkt in de Inspector!");
+        }
+
+       
+        StartWave();
     }
 
     void Update()
     {
-
         if (aliveEnemies <= 0 && currentWave > 0 && currentWave < totalWaves)
         {
             StartWave();
-
         }
     }
 
@@ -120,8 +127,7 @@ public class waveSystem : MonoBehaviour
             GameObject enemy = Instantiate(prefab, spawnPoint.position, spawnPoint.rotation);
             aliveEnemies++;
 
-
-            enemy.GetComponent<EnemyPathfinding>().SetTurns(Turn1,Turn2,Turn3, Turn4, Turn5, Turn6, Turn7);
+            enemy.GetComponent<EnemyPathfinding>().SetTurns(Turn1, Turn2, Turn3, Turn4, Turn5, Turn6, Turn7);
 
             EnemyDeathHandler deathHandler = enemy.AddComponent<EnemyDeathHandler>();
             deathHandler.onDeath += () => aliveEnemies--;

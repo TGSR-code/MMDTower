@@ -5,7 +5,7 @@ public class MoneyHandler : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI playerMoneyText;
     [SerializeField] private AudioSource moneyGainSound;
-    [SerializeField] private int startMoney = 500;
+    [SerializeField] private int startMoney = 0; 
 
     private int currentMoney;
 
@@ -15,7 +15,6 @@ public class MoneyHandler : MonoBehaviour
         UpdateMoneyText();
     }
 
-    
     public void GainMoney(int amount)
     {
         currentMoney += amount;
@@ -24,8 +23,12 @@ public class MoneyHandler : MonoBehaviour
             moneyGainSound.Play();
     }
 
-    public void UpdateMoneyText()
+    private void UpdateMoneyText()
     {
-
+        if (playerMoneyText != null)
+            playerMoneyText.text = currentMoney.ToString();
     }
+
+    
+    public int GetMoney() => currentMoney;
 }
