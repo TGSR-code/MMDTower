@@ -4,18 +4,29 @@ using UnityEngine.UI;
 
 public class waveSystem : MonoBehaviour
 {
-    [SerializeField] private GameObject enemyPrefab;
+
+    [SerializeField] private EnemyPathfinding EnemyPathfindingEnemy;
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private TextMeshProUGUI waveCounterText;
-  
+
+    [SerializeField] private Transform Turn1;
+    [SerializeField] private Transform Turn2;
+    [SerializeField] private Transform Turn3;
+    [SerializeField] private Transform Turn4;
+    [SerializeField] private Transform Turn5;
+    [SerializeField] private Transform Turn6;
+    [SerializeField] private Transform Turn7;
+
+
     [SerializeField] private Button startButton;
 
 
     private int currentWave = 0;
     private int totalWaves = 15;
     private int aliveEnemies = 0;
-    
 
+
+    
 
     public void StartGame()
     {
@@ -41,64 +52,64 @@ public class waveSystem : MonoBehaviour
 
         if (currentWave == 1)
         {
-            SpawnEnemies(enemyPrefab, 3);
+            SpawnEnemies(EnemyPathfindingEnemy.EnemyPrefab, 3);
         }
         else if (currentWave == 2)
         {
-            SpawnEnemies(enemyPrefab, 3);
+            SpawnEnemies(EnemyPathfindingEnemy.EnemyPrefab, 3);
         }
         else if (currentWave == 3)
         {
-            SpawnEnemies(enemyPrefab, 3);
+            SpawnEnemies(EnemyPathfindingEnemy.EnemyPrefab, 3);
         }
         else if (currentWave == 4)
         {
-            SpawnEnemies(enemyPrefab, 3);
+            SpawnEnemies(EnemyPathfindingEnemy.EnemyPrefab, 3);
         }
         else if (currentWave == 5)
         {
-            SpawnEnemies(enemyPrefab, 3);
+            SpawnEnemies(EnemyPathfindingEnemy.EnemyPrefab, 3);
         }
         else if (currentWave == 6)
         {
-            SpawnEnemies(enemyPrefab, 3);
+            SpawnEnemies(EnemyPathfindingEnemy.EnemyPrefab, 3);
         }
         else if (currentWave == 7)
         {
-            SpawnEnemies(enemyPrefab, 3);
+            SpawnEnemies(EnemyPathfindingEnemy.EnemyPrefab, 3);
         }
         else if (currentWave == 8)
         {
-            SpawnEnemies(enemyPrefab, 3);
+            SpawnEnemies(EnemyPathfindingEnemy.EnemyPrefab, 3);
         }
         else if (currentWave == 9)
         {
-            SpawnEnemies(enemyPrefab, 3);
+            SpawnEnemies(EnemyPathfindingEnemy.EnemyPrefab, 3);
         }
         else if (currentWave == 10)
         {
-            SpawnEnemies(enemyPrefab, 3);
+            SpawnEnemies(EnemyPathfindingEnemy.EnemyPrefab, 3);
         }
         else if (currentWave == 11)
         {
-            SpawnEnemies(enemyPrefab, 3);
+            SpawnEnemies(EnemyPathfindingEnemy.EnemyPrefab, 3);
         }
         else if (currentWave == 12)
         {
-            SpawnEnemies(enemyPrefab, 3);
+            SpawnEnemies(EnemyPathfindingEnemy.EnemyPrefab, 3);
         }
         else if (currentWave == 13)
         {
-            SpawnEnemies(enemyPrefab, 3);
+            SpawnEnemies(EnemyPathfindingEnemy.EnemyPrefab, 3);
         }
         else if (currentWave == 14)
         {
-            SpawnEnemies(enemyPrefab, 3);
+            SpawnEnemies(EnemyPathfindingEnemy.EnemyPrefab, 3);
         }
         else if (currentWave == 15)
         {
-            SpawnEnemies(enemyPrefab, 3);
-            Debug.Log("Laatste wave gestart!");
+            SpawnEnemies(EnemyPathfindingEnemy.EnemyPrefab, 3);
+            Debug.Log("LastWave");
         }
     }
 
@@ -110,8 +121,12 @@ public class waveSystem : MonoBehaviour
             aliveEnemies++;
 
 
+            enemy.GetComponent<EnemyPathfinding>().SetTurns(Turn1,Turn2,Turn3, Turn4, Turn5, Turn6, Turn7);
+
             EnemyDeathHandler deathHandler = enemy.AddComponent<EnemyDeathHandler>();
             deathHandler.onDeath += () => aliveEnemies--;
+
+            enemy.GetComponent<EnemyPathfinding>().EnemyPrefab = EnemyPathfindingEnemy.EnemyPrefab;
         }
     }
 }

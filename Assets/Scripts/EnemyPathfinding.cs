@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 
-public class EnemyPathfinding : MonoBehaviour
+public class EnemyPathfinding : waveSystem
 {
     [SerializeField] private float moveSpeed = 3f;
-
+    [SerializeField] public GameObject EnemyPrefab;
     [SerializeField] private Transform Turn1;
     [SerializeField] private Transform Turn2;
     [SerializeField] private Transform Turn3;
@@ -24,6 +24,18 @@ public class EnemyPathfinding : MonoBehaviour
         };
     }
 
+
+    public void SetTurns(Transform turn1, Transform turn2, Transform turn3, Transform turn4, Transform turn5,Transform turn6, Transform turn7)
+    {
+        Turn1 = turn1;
+        Turn2 = turn2;
+        Turn3 = turn3;
+        Turn4 = turn4;
+        Turn5 = turn5;
+        Turn6 = turn6;
+        Turn7 = turn7;
+
+    }
     void Update()
     {
         if (waypoints == null || HuidigeWaypoint >= waypoints.Length) return;
