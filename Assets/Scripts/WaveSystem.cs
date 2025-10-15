@@ -37,7 +37,7 @@ public class waveSystem : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("MoneyHandler is niet gelinkt in de Inspector!");
+            Debug.LogWarning("MoneyHandler??DASd/a");
         }
 
        
