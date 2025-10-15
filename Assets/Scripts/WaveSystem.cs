@@ -64,56 +64,72 @@ public class waveSystem : MonoBehaviour
         else if (currentWave == 2)
         {
             SpawnEnemies(EnemyPathfindingEnemy.EnemyPrefab, 3);
+            moneyHandler.GainMoney(100);
+
+
         }
         else if (currentWave == 3)
         {
             SpawnEnemies(EnemyPathfindingEnemy.EnemyPrefab, 3);
+            moneyHandler.GainMoney(125);
         }
         else if (currentWave == 4)
         {
             SpawnEnemies(EnemyPathfindingEnemy.EnemyPrefab, 3);
+            moneyHandler.GainMoney(150);
         }
         else if (currentWave == 5)
         {
             SpawnEnemies(EnemyPathfindingEnemy.EnemyPrefab, 3);
+            moneyHandler.GainMoney(175);
         }
         else if (currentWave == 6)
         {
             SpawnEnemies(EnemyPathfindingEnemy.EnemyPrefab, 3);
+            moneyHandler.GainMoney(200);
         }
         else if (currentWave == 7)
         {
             SpawnEnemies(EnemyPathfindingEnemy.EnemyPrefab, 3);
+            moneyHandler.GainMoney(225);
         }
         else if (currentWave == 8)
         {
             SpawnEnemies(EnemyPathfindingEnemy.EnemyPrefab, 3);
+            moneyHandler.GainMoney(250);
         }
         else if (currentWave == 9)
         {
             SpawnEnemies(EnemyPathfindingEnemy.EnemyPrefab, 3);
+            moneyHandler.GainMoney(275);
         }
         else if (currentWave == 10)
         {
             SpawnEnemies(EnemyPathfindingEnemy.EnemyPrefab, 3);
+            moneyHandler.GainMoney(500);
         }
         else if (currentWave == 11)
         {
             SpawnEnemies(EnemyPathfindingEnemy.EnemyPrefab, 3);
+            moneyHandler.GainMoney(325);
         }
         else if (currentWave == 12)
         {
             SpawnEnemies(EnemyPathfindingEnemy.EnemyPrefab, 3);
+            moneyHandler.GainMoney(350);
         }
         else if (currentWave == 13)
         {
             SpawnEnemies(EnemyPathfindingEnemy.EnemyPrefab, 3);
+            moneyHandler.GainMoney(375);
         }
         else if (currentWave == 14)
         {
             SpawnEnemies(EnemyPathfindingEnemy.EnemyPrefab, 3);
+            moneyHandler.GainMoney(400);
         }
         else if (currentWave == 15)
+            moneyHandler.GainMoney(1000);
         {
             SpawnEnemies(EnemyPathfindingEnemy.EnemyPrefab, 3);
             Debug.Log("LastWave");
