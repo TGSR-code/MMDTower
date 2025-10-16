@@ -7,6 +7,7 @@ public class waveSystem : MonoBehaviour
     [SerializeField] private EnemyPathfinding EnemyPathfindingEnemy;
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private TextMeshProUGUI waveCounterText;
+    
 
     [SerializeField] private Transform Turn1;
     [SerializeField] private Transform Turn2;
@@ -26,9 +27,11 @@ public class waveSystem : MonoBehaviour
     private int aliveEnemies = 0;
 
     public void StartGame()
+
     {
        
         Destroy(startButton.gameObject);
+        
 
         
         if (moneyHandler != null)
@@ -160,5 +163,10 @@ public class EnemyDeathHandler : MonoBehaviour
     private void OnDestroy()
     {
         if (onDeath != null) onDeath.Invoke();
+
     }
+
+    
+
+    
 }
