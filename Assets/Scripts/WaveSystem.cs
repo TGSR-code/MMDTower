@@ -1,13 +1,13 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using System.Collections;
 
 public class waveSystem : MonoBehaviour
 {
     [SerializeField] private EnemyPathfinding EnemyPathfindingEnemy;
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private TextMeshProUGUI waveCounterText;
-    
 
     [SerializeField] private Transform Turn1;
     [SerializeField] private Transform Turn2;
@@ -18,41 +18,26 @@ public class waveSystem : MonoBehaviour
     [SerializeField] private Transform Turn7;
 
     [SerializeField] private Button startButton;
-
-    [Header("Money System")]
-    [SerializeField] private MoneyHandler moneyHandler; 
+    [SerializeField] private MoneyHandler moneyHandler;
 
     private int currentWave = 0;
     private int totalWaves = 15;
     private int aliveEnemies = 0;
 
     public void StartGame()
-
     {
-       
         Destroy(startButton.gameObject);
-        
 
-        
         if (moneyHandler != null)
-        {
             moneyHandler.GainMoney(500);
-        }
-        else
-        {
-            Debug.LogWarning("MoneyHandler??DASd/a");
-        }
 
-       
         StartWave();
     }
 
     void Update()
     {
         if (aliveEnemies <= 0 && currentWave > 0 && currentWave < totalWaves)
-        {
             StartWave();
-        }
     }
 
     private void StartWave()
@@ -62,84 +47,82 @@ public class waveSystem : MonoBehaviour
 
         if (currentWave == 1)
         {
-            SpawnEnemies(EnemyPathfindingEnemy.EnemyPrefab, 3);
+            StartCoroutine(Enmyspawndelay(EnemyPathfindingEnemy.EnemyPrefab, 3, 4f));
         }
         else if (currentWave == 2)
         {
-            SpawnEnemies(EnemyPathfindingEnemy.EnemyPrefab, 3);
+            StartCoroutine(Enmyspawndelay(EnemyPathfindingEnemy.EnemyPrefab, 3, 4f));
             moneyHandler.GainMoney(100);
-
-
         }
         else if (currentWave == 3)
         {
-            SpawnEnemies(EnemyPathfindingEnemy.EnemyPrefab, 3);
+            StartCoroutine(Enmyspawndelay(EnemyPathfindingEnemy.EnemyPrefab, 3, 4f));
             moneyHandler.GainMoney(125);
         }
         else if (currentWave == 4)
         {
-            SpawnEnemies(EnemyPathfindingEnemy.EnemyPrefab, 3);
+            StartCoroutine(Enmyspawndelay(EnemyPathfindingEnemy.EnemyPrefab, 3, 4f));
             moneyHandler.GainMoney(150);
         }
         else if (currentWave == 5)
         {
-            SpawnEnemies(EnemyPathfindingEnemy.EnemyPrefab, 3);
+            StartCoroutine(Enmyspawndelay(EnemyPathfindingEnemy.EnemyPrefab, 3, 4f));
             moneyHandler.GainMoney(175);
         }
         else if (currentWave == 6)
         {
-            SpawnEnemies(EnemyPathfindingEnemy.EnemyPrefab, 3);
+            StartCoroutine(Enmyspawndelay(EnemyPathfindingEnemy.EnemyPrefab, 3, 4f));
             moneyHandler.GainMoney(200);
         }
         else if (currentWave == 7)
         {
-            SpawnEnemies(EnemyPathfindingEnemy.EnemyPrefab, 3);
+            StartCoroutine(Enmyspawndelay(EnemyPathfindingEnemy.EnemyPrefab, 3, 4f));
             moneyHandler.GainMoney(225);
         }
         else if (currentWave == 8)
         {
-            SpawnEnemies(EnemyPathfindingEnemy.EnemyPrefab, 3);
+            StartCoroutine(Enmyspawndelay(EnemyPathfindingEnemy.EnemyPrefab, 3, 4f));
             moneyHandler.GainMoney(250);
         }
         else if (currentWave == 9)
         {
-            SpawnEnemies(EnemyPathfindingEnemy.EnemyPrefab, 3);
+            StartCoroutine(Enmyspawndelay(EnemyPathfindingEnemy.EnemyPrefab, 3, 4f));
             moneyHandler.GainMoney(275);
         }
         else if (currentWave == 10)
         {
-            SpawnEnemies(EnemyPathfindingEnemy.EnemyPrefab, 3);
+            StartCoroutine(Enmyspawndelay(EnemyPathfindingEnemy.EnemyPrefab, 3, 4f));
             moneyHandler.GainMoney(500);
         }
         else if (currentWave == 11)
         {
-            SpawnEnemies(EnemyPathfindingEnemy.EnemyPrefab, 3);
+            StartCoroutine(Enmyspawndelay(EnemyPathfindingEnemy.EnemyPrefab, 3, 4f));
             moneyHandler.GainMoney(325);
         }
         else if (currentWave == 12)
         {
-            SpawnEnemies(EnemyPathfindingEnemy.EnemyPrefab, 3);
+            StartCoroutine(Enmyspawndelay(EnemyPathfindingEnemy.EnemyPrefab, 3, 4f));
             moneyHandler.GainMoney(350);
         }
         else if (currentWave == 13)
         {
-            SpawnEnemies(EnemyPathfindingEnemy.EnemyPrefab, 3);
+            StartCoroutine(Enmyspawndelay(EnemyPathfindingEnemy.EnemyPrefab, 3, 4f));
             moneyHandler.GainMoney(375);
         }
         else if (currentWave == 14)
         {
-            SpawnEnemies(EnemyPathfindingEnemy.EnemyPrefab, 3);
+            StartCoroutine(Enmyspawndelay(EnemyPathfindingEnemy.EnemyPrefab, 3, 4f));
             moneyHandler.GainMoney(400);
         }
         else if (currentWave == 15)
-            moneyHandler.GainMoney(1000);
         {
-            SpawnEnemies(EnemyPathfindingEnemy.EnemyPrefab, 3);
-            Debug.Log("LastWave");
+            StartCoroutine(Enmyspawndelay(EnemyPathfindingEnemy.EnemyPrefab, 3, 4f));
+            moneyHandler.GainMoney(1000);
+            Debug.Log("LastWaveTest");
         }
     }
 
-    private void SpawnEnemies(GameObject prefab, int amount)
+    private IEnumerator Enmyspawndelay(GameObject prefab, int amount, float delay)
     {
         for (int i = 0; i < amount; i++)
         {
@@ -152,6 +135,8 @@ public class waveSystem : MonoBehaviour
             deathHandler.onDeath += () => aliveEnemies--;
 
             enemy.GetComponent<EnemyPathfinding>().EnemyPrefab = EnemyPathfindingEnemy.EnemyPrefab;
+
+            yield return new WaitForSeconds(delay);
         }
     }
 }
@@ -163,10 +148,5 @@ public class EnemyDeathHandler : MonoBehaviour
     private void OnDestroy()
     {
         if (onDeath != null) onDeath.Invoke();
-
     }
-
-    
-
-    
 }
