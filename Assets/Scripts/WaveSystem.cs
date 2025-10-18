@@ -133,6 +133,8 @@ public class waveSystem : MonoBehaviour
 
             EnemyDeathHandler deathHandler = enemy.AddComponent<EnemyDeathHandler>();
             deathHandler.onDeath += () => aliveEnemies--;
+            deathHandler.MoneyHandler = moneyHandler;
+
 
             enemy.GetComponent<EnemyPathfinding>().EnemyPrefab = EnemyPathfindingEnemy.EnemyPrefab;
 
@@ -144,9 +146,15 @@ public class waveSystem : MonoBehaviour
 public class EnemyDeathHandler : MonoBehaviour
 {
     public System.Action onDeath;
+    public MoneyHandler MoneyHandler;
 
     private void OnDestroy()
     {
         if (onDeath != null) onDeath.Invoke();
+        if(MoneyHandler != null)
+        {
+            MoneyHandler.GainMoney(25);
+            print("EnemyMoneyTest");
+        }
     }
 }
