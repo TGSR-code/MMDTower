@@ -5,6 +5,7 @@ using System.Collections;
 
 public class waveSystem : MonoBehaviour
 {
+    [SerializeField] private EnemyManager enmyManager;
     [SerializeField] private EnemyPathfinding EnemyPathfindingEnemy;
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private TextMeshProUGUI waveCounterText;
