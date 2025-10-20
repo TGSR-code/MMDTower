@@ -134,7 +134,8 @@ MonoBehaviour:
   Turn7: {fileID: 0}
   startButton: {fileID: 0}
   moneyHandler: {fileID: 0}
-  moveSpeed: 1
+  health: 500
+  moveSpeed: 0.5
   EnemyPrefab: {fileID: 0}
   Turn1: {fileID: 0}
   Turn2: {fileID: 0}

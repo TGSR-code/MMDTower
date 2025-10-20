@@ -119,6 +119,7 @@ public class waveSystem : MonoBehaviour
         else if (currentWave == 15)
         {
             StartCoroutine(Enmyspawndelay(EnemyPathfindingEnemy.EnemyPrefab, 3, 4f));
+            StartCoroutine(Enmyspawndelay(enmyManager.EndBoss, 1, 4f));
             moneyHandler.GainMoney(1000);
             Debug.Log("LastWaveTest");
         }

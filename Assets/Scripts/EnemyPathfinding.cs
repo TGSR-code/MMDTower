@@ -2,6 +2,7 @@
 
 public class EnemyPathfinding : waveSystem
 {
+    [SerializeField] public float health;
     [SerializeField] private float moveSpeed = 3f;
     [SerializeField] public GameObject EnemyPrefab;
     [SerializeField] private Transform Turn1;
