@@ -49,6 +49,7 @@ public class waveSystem : MonoBehaviour
         if (currentWave == 1)
         {
             StartCoroutine(Enmyspawndelay(EnemyPathfindingEnemy.EnemyPrefab, 3, 4f));
+                StartCoroutine(Enmyspawndelay(enmyManager.FastEnemy, 3, 4f));
         }
         else if (currentWave == 2)
         {
