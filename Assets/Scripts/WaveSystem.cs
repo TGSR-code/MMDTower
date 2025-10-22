@@ -94,6 +94,7 @@ public class waveSystem : MonoBehaviour
         else if (currentWave == 10)
         {
             StartCoroutine(Enmyspawndelay(EnemyPathfindingEnemy.EnemyPrefab, 3, 4f));
+            StartCoroutine(Enmyspawndelay(enmyManager.NecromancerMiniBoss, 1, 4f));
             moneyHandler.GainMoney(500);
         }
         else if (currentWave == 11)
