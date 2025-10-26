@@ -36,7 +36,7 @@ public class BaseHealthBar : MonoBehaviour
             SceneManager.LoadScene("Gameplay");
         }
     }
-    void TakeDMG(float dmgg)
+    public void TakeDMG(float dmgg)
     {
         health -= dmgg;
     }

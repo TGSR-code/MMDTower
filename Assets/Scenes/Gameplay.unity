@@ -27970,7 +27970,6 @@ MonoBehaviour:
   Turn7: {fileID: 576923107}
   startButton: {fileID: 0}
   moneyHandler: {fileID: 0}
-  health: 0
   moveSpeed: 3
   EnemyPrefab: {fileID: 5797053910274969935, guid: 47f3c920b7bebb14cac06ecd85ca2904, type: 3}
   Turn1: {fileID: 1630417201}
@@ -32847,7 +32846,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1768619725
 MonoBehaviour:
   m_ObjectHideFlags: 0
