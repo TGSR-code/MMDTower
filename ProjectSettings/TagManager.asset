@@ -3,12 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - canPlace
+  - cantPlace
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Towers
   - Water
   - UI
   - whatIsGround
