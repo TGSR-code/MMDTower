@@ -33100,7 +33100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 8
   groundDrag: 0.25
-  jumpForce: 10
+  jumpForce: 6
   jumpCooldown: 0.25
   walkSpeed: 0
   sprintSpeed: 0
