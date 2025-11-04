@@ -65,8 +65,8 @@ public class EnemyPathfinding : waveSystem
 
             }
 
-            if (baseHealth != null && baseHealth.health <= 0f)
-            {
+            if (baseHealth != null && baseHealth.health == 0f)
+            {print("Died");
                 SceneManager.LoadScene("Gameplay");
             }
 
