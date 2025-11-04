@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4573773202872588150}
   - component: {fileID: 5289822599965275026}
   - component: {fileID: 3908243950958440188}
-  - component: {fileID: 594356407836390676}
+  - component: {fileID: 8723928682378841879}
   m_Layer: 7
   m_Name: Enemy
   m_TagString: Untagged
@@ -144,7 +144,7 @@ MonoBehaviour:
   Turn5: {fileID: 0}
   Turn6: {fileID: 0}
   Turn7: {fileID: 0}
---- !u!114 &594356407836390676
+--- !u!114 &8723928682378841879
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -156,5 +156,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57416860666decc459af1d1de40c6170, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
-  speed: 100
+  maxHealth: 2
+  baseSpeed: 1

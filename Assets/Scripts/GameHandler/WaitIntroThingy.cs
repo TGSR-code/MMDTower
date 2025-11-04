@@ -21,7 +21,7 @@ public class WaitIntroThingy : MonoBehaviour
 
         if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
         {
-            SceneManager.LoadScene(nextSceneIndex);
+            //SceneManager.LoadScene(nextSceneIndex);
         }
     }
 }

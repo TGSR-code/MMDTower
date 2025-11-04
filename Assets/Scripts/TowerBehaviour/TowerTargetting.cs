@@ -1,7 +1,6 @@
 using UnityEngine;
-using System.Collections.Generic;
 
-public class TowerTargetting : MonoBehaviour
+public class TowerTargeting : MonoBehaviour
 {
     [SerializeField] private string enemyLayerName = "Enemy";
     [SerializeField] private float rotationSpeed = 5f;
@@ -12,14 +11,19 @@ public class TowerTargetting : MonoBehaviour
     {
         if (currentTarget == null)
         {
-            currentTarget = GetFirstEnemyInScene();
+            currentTarget = GetFirstEnemy();
         }
 
         if (currentTarget != null)
         {
-            Vector3 direction = (currentTarget.position - transform.position).normalized;
-            Quaternion lookRotation = Quaternion.LookRotation(direction);
-            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, rotationSpeed * Time.deltaTime);
+            Vector3 direction = currentTarget.position - transform.position;
+            direction.y = 0; // Alleen horizontaal draaien
+
+            if (direction.sqrMagnitude > 0.01f)
+            {
+                Quaternion lookRotation = Quaternion.LookRotation(direction);
+                transform.rotation = Quaternion.Lerp(transform.rotation, lookRotation, rotationSpeed * Time.deltaTime);
+            }
 
             if (!currentTarget.gameObject.activeInHierarchy)
             {
@@ -28,24 +32,22 @@ public class TowerTargetting : MonoBehaviour
         }
     }
 
-    private Transform GetFirstEnemyInScene()
+    private Transform GetFirstEnemy()
     {
         int enemyLayer = LayerMask.NameToLayer(enemyLayerName);
+
+        // Nieuwe manier (Unity 2023+)
         GameObject[] allObjects = Object.FindObjectsByType<GameObject>(FindObjectsSortMode.None);
 
-        List<GameObject> enemies = new List<GameObject>();
         foreach (GameObject obj in allObjects)
         {
             if (obj.layer == enemyLayer)
             {
-                enemies.Add(obj);
+                return obj.transform;
             }
         }
 
-        if (enemies.Count == 0)
-            return null;
-
-        return enemies[0].transform;
+        return null;
     }
 
     public Transform GetCurrentTarget()
