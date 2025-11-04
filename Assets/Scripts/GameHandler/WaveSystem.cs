@@ -4,7 +4,9 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class waveSystem : MonoBehaviour
+
 {
+    [SerializeField] private GameObject WinUi;
     [SerializeField] private EnemyManager enmyManager;
     [SerializeField] private EnemyPathfinding EnemyPathfindingEnemy;
     [SerializeField] private Transform spawnPoint;
@@ -39,6 +41,13 @@ public class waveSystem : MonoBehaviour
     {
         if (aliveEnemies <= 0 && currentWave > 0 && currentWave < totalWaves)
             StartWave();
+
+        if(currentWave == totalWaves && aliveEnemies <= 0)
+        {
+            WinGame();
+        }
+
+
     }
 
     private void StartWave()
@@ -144,6 +153,15 @@ public class waveSystem : MonoBehaviour
 
             yield return new WaitForSeconds(delay);
         }
+    }
+
+    private void WinGame()
+    { if (WinUi != null)
+        {
+            WinUi.SetActive(true);
+        }
+
+
     }
 }
 
