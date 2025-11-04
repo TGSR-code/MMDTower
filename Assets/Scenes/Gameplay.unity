@@ -41091,10 +41091,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TankyEnemy
       objectReference: {fileID: 0}
-    - target: {fileID: 2016939424537288773, guid: 164fb7bdba1c18f4b8fb3b4480fdea71, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5431568988252536529, guid: 164fb7bdba1c18f4b8fb3b4480fdea71, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -41166,30 +41162,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2016939424537288773, guid: 164fb7bdba1c18f4b8fb3b4480fdea71, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1970222515075792863}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 164fb7bdba1c18f4b8fb3b4480fdea71, type: 3}
---- !u!1 &1970222515075792862 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2016939424537288773, guid: 164fb7bdba1c18f4b8fb3b4480fdea71, type: 3}
-  m_PrefabInstance: {fileID: 1970222515075792861}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1970222515075792863
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1970222515075792862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57416860666decc459af1d1de40c6170, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 300
-  speed: 1
 --- !u!1001 &2702456674379162077
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41270,37 +41244,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FastEnemy
       objectReference: {fileID: 0}
-    - target: {fileID: 8472052976170933740, guid: 4f359ba63fa1cf34cb31c3c349edd544, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8472052976170933740, guid: 4f359ba63fa1cf34cb31c3c349edd544, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2702456674379162079}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f359ba63fa1cf34cb31c3c349edd544, type: 3}
---- !u!1 &2702456674379162078 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8472052976170933740, guid: 4f359ba63fa1cf34cb31c3c349edd544, type: 3}
-  m_PrefabInstance: {fileID: 2702456674379162077}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2702456674379162079
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2702456674379162078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57416860666decc459af1d1de40c6170, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 50
-  speed: 6
 --- !u!1001 &3714256579400421274
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41380,10 +41328,6 @@ PrefabInstance:
     - target: {fileID: 7654820698720730613, guid: 5dab2f8511f4f3c429777262540addb9, type: 3}
       propertyPath: m_Name
       value: NecoMancer
-      objectReference: {fileID: 0}
-    - target: {fileID: 7654820698720730613, guid: 5dab2f8511f4f3c429777262540addb9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -41470,37 +41414,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
-    - target: {fileID: 5797053910274969935, guid: 47f3c920b7bebb14cac06ecd85ca2904, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5797053910274969935, guid: 47f3c920b7bebb14cac06ecd85ca2904, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6632456270131861116}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47f3c920b7bebb14cac06ecd85ca2904, type: 3}
---- !u!1 &6632456270131861115 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5797053910274969935, guid: 47f3c920b7bebb14cac06ecd85ca2904, type: 3}
-  m_PrefabInstance: {fileID: 6632456270131861114}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6632456270131861116
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6632456270131861115}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57416860666decc459af1d1de40c6170, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 3
-  speed: 100
 --- !u!1001 &9074249996217284956
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41512,10 +41430,6 @@ PrefabInstance:
     - target: {fileID: 1674592836072749341, guid: 523c0a787dc0e8f4c955b06e50bd9f85, type: 3}
       propertyPath: m_Name
       value: EndBoss
-      objectReference: {fileID: 0}
-    - target: {fileID: 1674592836072749341, guid: 523c0a787dc0e8f4c955b06e50bd9f85, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3094994657031520921, guid: 523c0a787dc0e8f4c955b06e50bd9f85, type: 3}
       propertyPath: Turn1

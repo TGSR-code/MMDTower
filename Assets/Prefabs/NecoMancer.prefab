@@ -13,13 +13,14 @@ GameObject:
   - component: {fileID: 8966625137478791629}
   - component: {fileID: 2952109930098980540}
   - component: {fileID: 3156713508804785691}
-  m_Layer: 0
+  - component: {fileID: 6200858562698452283}
+  m_Layer: 7
   m_Name: NecoMancer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4102420040842611922
 Transform:
   m_ObjectHideFlags: 0
@@ -28,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7654820698720730613}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 100.0527, z: 1.225}
   m_LocalScale: {x: 0.1, y: 0.30538002, z: 0.1}
   m_ConstrainProportionsScale: 0
@@ -143,3 +144,17 @@ MonoBehaviour:
   Turn5: {fileID: 0}
   Turn6: {fileID: 0}
   Turn7: {fileID: 0}
+--- !u!114 &6200858562698452283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7654820698720730613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57416860666decc459af1d1de40c6170, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 2
+  baseSpeed: 1
