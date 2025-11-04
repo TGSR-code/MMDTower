@@ -8,8 +8,10 @@ public class EnemyStats : MonoBehaviour
 
     private float currentHealth;
     private float currentSpeed;
-    private bool isFrozen = false;
-    private float effectTimer = 0f;
+
+    private bool isSlowed = false;
+    private float slowTimer = 0f;
+    private float slowMultiplier = 1f;
 
     void Start()
     {
@@ -19,25 +21,20 @@ public class EnemyStats : MonoBehaviour
 
     void Update()
     {
-        HandleEffects();
-
-        // Beweging alleen als niet bevroren
-        if (!isFrozen)
-        {
-            transform.Translate(Vector3.forward * currentSpeed * Time.deltaTime);
-        }
+        HandleSlowEffect();
+        transform.Translate(Vector3.forward * currentSpeed * Time.deltaTime);
     }
 
-    private void HandleEffects()
+    private void HandleSlowEffect()
     {
-        if (effectTimer > 0)
+        if (slowTimer > 0)
         {
-            effectTimer -= Time.deltaTime;
+            slowTimer -= Time.deltaTime;
 
-            if (effectTimer <= 0)
+            if (slowTimer <= 0)
             {
-                // effect is voorbij, reset
-                isFrozen = false;
+                isSlowed = false;
+                slowMultiplier = 1f;
                 currentSpeed = baseSpeed;
             }
         }
@@ -53,19 +50,12 @@ public class EnemyStats : MonoBehaviour
         }
     }
 
-    public void ApplySlow(float slowMultiplier, float duration)
+    public void ApplySlow(float multiplier, float duration)
     {
-        if (isFrozen) return; // niet tegelijk met freeze
-
-        currentSpeed = baseSpeed * Mathf.Clamp(slowMultiplier, 0.1f, 1f);
-        effectTimer = duration;
-    }
-
-    public void ApplyFreeze(float duration)
-    {
-        isFrozen = true;
-        currentSpeed = 0f;
-        effectTimer = duration;
+        isSlowed = true;
+        slowMultiplier = Mathf.Clamp(multiplier, 0.1f, 1f);
+        slowTimer = duration;
+        currentSpeed = baseSpeed * slowMultiplier;
     }
 
     private void Die()
