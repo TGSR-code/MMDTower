@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyPathfinding : waveSystem
 {
@@ -60,6 +61,12 @@ public class EnemyPathfinding : waveSystem
             if (baseHealth != null)
             {
                 baseHealth.TakeDMG(1f);
+                
+            }
+
+            if (baseHealth != null && baseHealth.health <= 0f)
+            {
+                SceneManager.LoadScene("Gameplay");
             }
 
             Destroy(gameObject);

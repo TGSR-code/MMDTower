@@ -33,7 +33,7 @@ public class BaseHealthBar : MonoBehaviour
 
         if(health <= 0f)
         {
-            SceneManager.LoadScene("Gameplay");
+            
         }
     }
     public void TakeDMG(float dmgg)
