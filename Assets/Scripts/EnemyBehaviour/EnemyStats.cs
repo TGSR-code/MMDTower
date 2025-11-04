@@ -2,19 +2,26 @@ using UnityEngine;
 
 public class EnemyStats : MonoBehaviour
 {
-    [SerializeField] public float health;
-    [SerializeField] public int speed;
+    [Header("Enemy Stats")]
+    [SerializeField] private float health = 50f;
+    [SerializeField] private int speed = 3;
 
-    public float Health=> health;
+    public float Health => health;
     public int Speed => speed;
-    void Start()
+
+    public void TakeDamage(float amount)
     {
-        
+        health -= amount;
+
+        if (health <= 0)
+        {
+            Die();
+        }
     }
 
-    
-    void Update()
+    private void Die()
     {
-        
+
+        Destroy(gameObject);
     }
 }

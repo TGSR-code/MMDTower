@@ -82,17 +82,20 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 81db08dbe0c9eaa489fac61fb13dff88, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6302624819236275580}
+      addedObject: {fileID: -7612102953744044546}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 81db08dbe0c9eaa489fac61fb13dff88, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6211723539398749291}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 81db08dbe0c9eaa489fac61fb13dff88, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -726951135618925865}
   m_SourcePrefab: {fileID: 100100000, guid: 81db08dbe0c9eaa489fac61fb13dff88, type: 3}
 --- !u!1 &187643345742055541 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 81db08dbe0c9eaa489fac61fb13dff88, type: 3}
   m_PrefabInstance: {fileID: 1034646424952173860}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6302624819236275580
+--- !u!114 &-7612102953744044546
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -101,9 +104,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 187643345742055541}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20915bbddff9fe64f9e73b2f1ba759c7, type: 3}
+  m_Script: {fileID: 11500000, guid: 919c54026fdc7b7408dfa96d5ba35eea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyLayerName: Enemy
+  rotationSpeed: 5
 --- !u!65 &6211723539398749291
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -125,3 +130,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.6300179, y: 1.8262495, z: 2.3437462}
   m_Center: {x: -0.00030332804, y: 1.2065907, z: 0.26208115}
+--- !u!114 &-726951135618925865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187643345742055541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20915bbddff9fe64f9e73b2f1ba759c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 50
+  attackRange: 10
+  attackCooldown: 1.5
