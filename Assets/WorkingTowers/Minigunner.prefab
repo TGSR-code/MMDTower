@@ -142,9 +142,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20915bbddff9fe64f9e73b2f1ba759c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
-  attackRange: 2.5
-  attackCooldown: 1.5
-  attackType: 1
+  damage: 10
+  attackRange: 3
+  attackCooldown: 1
+  attackType: 0
   effectDuration: 2
   slowMultiplier: 0.5

@@ -17,7 +17,7 @@ public class TowerTargeting : MonoBehaviour
         if (currentTarget != null)
         {
             Vector3 direction = currentTarget.position - transform.position;
-            direction.y = 0; // Alleen horizontaal draaien
+            direction.y = 0;
 
             if (direction.sqrMagnitude > 0.01f)
             {
@@ -36,7 +36,6 @@ public class TowerTargeting : MonoBehaviour
     {
         int enemyLayer = LayerMask.NameToLayer(enemyLayerName);
 
-        // Nieuwe manier (Unity 2023+)
         GameObject[] allObjects = Object.FindObjectsByType<GameObject>(FindObjectsSortMode.None);
 
         foreach (GameObject obj in allObjects)

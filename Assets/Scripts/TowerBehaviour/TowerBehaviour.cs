@@ -10,8 +10,8 @@ public class TowerBehaviour : MonoBehaviour
 
     [Header("Attack Type")]
     public AttackType attackType = AttackType.Normal;
-    public float effectDuration = 2f;  // Hoe lang slow/freeze duurt
-    public float slowMultiplier = 0.5f; // Hoeveel langzamer bij slow (0.5 = helft snelheid)
+    public float effectDuration = 2f;
+    public float slowMultiplier = 0.5f;
 
     private TowerTargeting targeting;
     private float attackTimer = 0f;
@@ -53,11 +53,6 @@ public class TowerBehaviour : MonoBehaviour
                 enemy.TakeDamage(damage);
                 enemy.ApplySlow(slowMultiplier, effectDuration);
                 break;
-
-            case AttackType.Freeze:
-                enemy.TakeDamage(damage);
-                enemy.ApplyFreeze(effectDuration);
-                break;
         }
     }
 
@@ -71,6 +66,5 @@ public class TowerBehaviour : MonoBehaviour
 public enum AttackType
 {
     Normal,
-    Slow,
-    Freeze
+    Slow
 }

@@ -3,28 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class RestartGame : MonoBehaviour
 {
-   
-    void Start()
-    {
-        
-    }
-
-  
-    void Update()
-    {
-        
-    }
-
-
-
     public void restartGame()
     {
-        SceneManager.LoadScene("Gameplay");
-    
-    
-    
-    
-    
-    
+        print("Game Restarted");
+        //SceneManager.LoadScene("Gameplay");
     }
 }

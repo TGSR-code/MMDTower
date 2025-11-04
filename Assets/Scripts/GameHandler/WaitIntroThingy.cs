@@ -21,6 +21,7 @@ public class WaitIntroThingy : MonoBehaviour
 
         if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
         {
+            print("mike scene changed");
             //SceneManager.LoadScene(nextSceneIndex);
         }
     }
