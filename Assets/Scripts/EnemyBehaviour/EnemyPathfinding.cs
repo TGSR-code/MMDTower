@@ -60,8 +60,9 @@ public class EnemyPathfinding : waveSystem
             BaseHealthBar baseHealth = FindAnyObjectByType<BaseHealthBar>();
             if (baseHealth != null)
             {
-                baseHealth.TakeDMG(1f);
+                baseHealth.TakeDMG(1);
                 
+
             }
 
             if (baseHealth != null && baseHealth.health <= 0f)
