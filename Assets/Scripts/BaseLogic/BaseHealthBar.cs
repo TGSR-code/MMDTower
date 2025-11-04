@@ -10,7 +10,7 @@ using UnityEngine.Windows;
 public class BaseHealthBar : MonoBehaviour
 {
     public Slider BaseHealthSlider;
-    public float MaxBaseHealth = 3f;
+    public float MaxBaseHealth;
     public float health;
     
     void Start()
@@ -26,10 +26,7 @@ public class BaseHealthBar : MonoBehaviour
             BaseHealthSlider.value = health;
         }
 
-        if (UnityEngine.Input.GetKeyDown(KeyCode.Space))
-        {
-            health -= 1f;
-        }
+        
 
         if(health <= 0f)
         {
