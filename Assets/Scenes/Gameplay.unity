@@ -1651,7 +1651,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sensX: 400
   sensY: 400
-  unlockMouse: 306
   orientation: {fileID: 953421659}
 --- !u!1001 &83686726
 PrefabInstance:
@@ -22022,7 +22021,7 @@ Transform:
   m_GameObject: {fileID: 1157167051}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 6.42, z: 0}
   m_LocalScale: {x: 0.48612902, y: 0.4221965, z: 0.46401215}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22042,6 +22041,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainCamera: {fileID: 80472563}
   TopViewCamera: {fileID: 330585545}
+  PlayerObject: {fileID: 1768619724}
   SwitchKey: 9
   ResetKey: 114
   TopViewSpeed: 8

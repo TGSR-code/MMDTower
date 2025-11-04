@@ -6,7 +6,7 @@ public class PlayerCamera : MonoBehaviour
     public float sensX;
     public float sensY;
 
-    public KeyCode unlockMouse;
+    
 
     public Transform orientation;
 
@@ -19,27 +19,21 @@ public class PlayerCamera : MonoBehaviour
         Cursor.visible = false;
     }
 
-    private void CursorUnlock()
-    {
-        if (Input.GetKeyDown(unlockMouse))
-        {
-            if (Cursor.lockState == CursorLockMode.Locked)
-            {
-                Cursor.lockState = CursorLockMode.None;
-                Cursor.visible = true;
-            }
-            else
-            {
-                Cursor.lockState = CursorLockMode.Locked;
-                Cursor.visible = false;
-            }
-        }
-    }
+    
 
     private void Update()
     {
         //unlock cursor / locks again
-        CursorUnlock();
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+        else if (Input.GetMouseButton(1))
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
 
         //only rotate cam if cursor is locked
         if (Cursor.lockState != CursorLockMode.Locked)

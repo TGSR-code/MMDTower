@@ -7,6 +7,9 @@ public class CameraHandler : MonoBehaviour
     [Header("Camera")]
     [SerializeField] Camera MainCamera;
     [SerializeField] Camera TopViewCamera;
+    [SerializeField] GameObject PlayerObject;
+    
+
 
     [Header("Settings")]
     [SerializeField] KeyCode SwitchKey = KeyCode.Tab;
@@ -20,6 +23,7 @@ public class CameraHandler : MonoBehaviour
     {
         MainCamera.gameObject.SetActive(true);
         TopViewCamera.gameObject.SetActive(false);
+        PlayerObject.gameObject.GetComponent<PlayerMovement>().enabled = true;
     }
 
     void Update()
@@ -29,11 +33,13 @@ public class CameraHandler : MonoBehaviour
             MainActive = !MainActive;
             MainCamera.gameObject.SetActive(MainActive);
             TopViewCamera.gameObject.SetActive(!MainActive);
+            PlayerObject.gameObject.GetComponent<PlayerMovement>().enabled = MainActive;
             Debug.Log("CameraSwitch Pressed");
         }
 
         if (!MainActive) //top view camera movement
         {
+            
             Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 
             TopViewCamera.transform.position += move * TopViewSpeed * Time.deltaTime;
