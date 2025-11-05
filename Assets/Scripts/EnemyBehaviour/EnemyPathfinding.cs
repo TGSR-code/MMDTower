@@ -54,20 +54,27 @@ public class EnemyPathfinding : waveSystem
         {
             HuidigeWaypoint++;
         }
-
         if (HuidigeWaypoint >= waypoints.Length)
+
         {
-            BaseHealthBar baseHealth = FindAnyObjectByType<BaseHealthBar>();
+            BaseHealthBar baseHealth = FindObjectOfType<BaseHealthBar>();
             if (baseHealth != null)
             {
-                baseHealth.TakeDMG(1);
-                
-
+                baseHealth.TakeDMG(1f);
+                print("1 dmg gekregeken");
             }
-
-            if (baseHealth != null && baseHealth.health <= 0f)
-            {print("Died");
+            if (baseHealth.health <= 0)
+            {
                 SceneManager.LoadScene("Gameplay");
+                print(" dood gegaan");
+
+
+
+
+
+
+
+
             }
 
             Destroy(gameObject);

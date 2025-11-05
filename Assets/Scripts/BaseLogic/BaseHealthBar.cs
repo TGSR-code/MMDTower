@@ -33,6 +33,9 @@ public class BaseHealthBar : MonoBehaviour
     public void TakeDMG(float dmgg)
     {
         health -= dmgg;
+
+        BaseHealthSlider.value = health;
+
     }
 }
 
