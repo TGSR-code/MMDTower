@@ -22,15 +22,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 22d3bc0bc675d694f9ead23f20aab885, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3
+      value: 3.1770258
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 22d3bc0bc675d694f9ead23f20aab885, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.20854953
+      value: 0.20854929
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 22d3bc0bc675d694f9ead23f20aab885, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.422306
+      value: 10.731872
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 22d3bc0bc675d694f9ead23f20aab885, type: 3}
       propertyPath: m_LocalRotation.w
@@ -168,6 +168,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 5593136184321654837}
   m_SourcePrefab: {fileID: 100100000, guid: 22d3bc0bc675d694f9ead23f20aab885, type: 3}
+--- !u!4 &6115151583618374943 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 22d3bc0bc675d694f9ead23f20aab885, type: 3}
+  m_PrefabInstance: {fileID: 6005506716404349684}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6887887688193394597 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 22d3bc0bc675d694f9ead23f20aab885, type: 3}
@@ -205,6 +210,8 @@ MonoBehaviour:
   attackType: 1
   effectDuration: 2
   slowMultiplier: 0.5
+  shootEffect: {fileID: 100006, guid: a3c75a37f28d9c143b787fa14b51fefa, type: 3}
+  effectSpawnPoint: {fileID: 6115151583618374943}
 --- !u!65 &5593136184321654837
 BoxCollider:
   m_ObjectHideFlags: 0

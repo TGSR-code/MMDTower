@@ -13,6 +13,10 @@ public class TowerBehaviour : MonoBehaviour
     public float effectDuration = 2f;
     public float slowMultiplier = 0.5f;
 
+    [Header("Attack Effect")]
+    public GameObject shootEffect;
+    public Transform effectSpawnPoint;
+
     private TowerTargeting targeting;
     private float attackTimer = 0f;
 
@@ -43,6 +47,8 @@ public class TowerBehaviour : MonoBehaviour
         EnemyStats enemy = target.GetComponent<EnemyStats>();
         if (enemy == null) return;
 
+        PlayEffect();
+
         switch (attackType)
         {
             case AttackType.Normal:
@@ -55,6 +61,22 @@ public class TowerBehaviour : MonoBehaviour
                 break;
         }
     }
+
+    private void PlayEffect()
+    {
+        if (shootEffect == null) return;
+
+        Vector3 pos = effectSpawnPoint ? effectSpawnPoint.position : transform.position;
+        Quaternion rot = effectSpawnPoint ? effectSpawnPoint.rotation : Quaternion.identity;
+
+        GameObject fx = Instantiate(shootEffect, pos, rot);
+
+        fx.transform.localScale = transform.lossyScale;
+
+        Destroy(fx, 0.5f);
+    }
+
+
 
     void OnDrawGizmosSelected()
     {

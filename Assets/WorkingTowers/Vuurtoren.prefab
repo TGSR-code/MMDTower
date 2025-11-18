@@ -22,15 +22,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a4f79da7ff0f1b542bb6610047ecdfe8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1
+      value: 3.1770258
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a4f79da7ff0f1b542bb6610047ecdfe8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.25837526
+      value: 0.25837502
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a4f79da7ff0f1b542bb6610047ecdfe8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.422306
+      value: 10.731872
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a4f79da7ff0f1b542bb6610047ecdfe8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -148,3 +148,10 @@ MonoBehaviour:
   attackType: 0
   effectDuration: 2
   slowMultiplier: 0.5
+  shootEffect: {fileID: 100002, guid: 8ab6c72f39c05e2488825eb424cb36d4, type: 3}
+  effectSpawnPoint: {fileID: 7666017293802891038}
+--- !u!4 &7666017293802891038 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a4f79da7ff0f1b542bb6610047ecdfe8, type: 3}
+  m_PrefabInstance: {fileID: 7920023467643240693}
+  m_PrefabAsset: {fileID: 0}
